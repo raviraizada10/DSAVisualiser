@@ -28,7 +28,8 @@ describe('Component Sanity: AlgorithmInfoPanel', () => {
             complexity: { time: { best: 'O(1)', average: 'O(1)', worst: 'O(1)' }, space: 'O(1)' },
             useCases: ['Case 1'],
             pros: ['Pro 1'],
-            cons: ['Con 1']
+            cons: ['Con 1'],
+            keySteps: ['Step 1', 'Step 2']
         };
 
         render(<AlgorithmInfoPanel data={mockData} />);
@@ -48,6 +49,7 @@ describe('Component Sanity: AlgorithmInfoPanel', () => {
             useCases: [],
             pros: [],
             cons: [],
+            keySteps: ['Step 1'],
             interviewTips: {
                 whenToUse: ['Use constraint A'],
                 commonProblems: ['Problem X'],
@@ -73,7 +75,7 @@ describe('Page Sanity: Visualizers Load', () => {
             availableAlgorithms: ['BFS']
         };
         // We might need to mock ResizeObserver for ResizableSplit
-        global.ResizeObserver = vi.fn().mockImplementation(() => ({
+        globalThis.ResizeObserver = vi.fn().mockImplementation(() => ({
             observe: vi.fn(),
             unobserve: vi.fn(),
             disconnect: vi.fn(),
@@ -84,7 +86,7 @@ describe('Page Sanity: Visualizers Load', () => {
     });
 
     it('NQueensVisualizer mounts successfully', () => {
-        global.ResizeObserver = vi.fn().mockImplementation(() => ({
+        globalThis.ResizeObserver = vi.fn().mockImplementation(() => ({
             observe: vi.fn(),
             unobserve: vi.fn(),
             disconnect: vi.fn(),

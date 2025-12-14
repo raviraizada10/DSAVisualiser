@@ -28,7 +28,7 @@ export interface GreedyStep {
     currentIdx: number;
     lastSelectedIdx: number | null;
     description: string;
-    codeLine: number;
+    codeLine?: number;
 }
 
 export function* activitySelection(initialActivities: Activity[]): Generator<GreedyStep> {

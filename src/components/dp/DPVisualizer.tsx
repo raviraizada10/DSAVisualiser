@@ -9,8 +9,6 @@ import { fibonacci } from '../../algorithms/dp/fibonacci';
 import { knapsack } from '../../algorithms/dp/knapsack';
 import { lcs } from '../../algorithms/dp/lcs';
 import { FIB_CODE, KNAPSACK_CODE, LCS_CODE, type DPStep, type DPCell } from '../../algorithms/dp/types';
-import AlgorithmInfoPanel from '../AlgorithmInfoPanel';
-import { ALGORITHM_DATA } from '../../data/algorithms';
 
 const ALGORITHMS = {
     'fib': { name: 'Fibonacci Sequence', code: FIB_CODE, generator: fibonacci },
